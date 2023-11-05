@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>CRUD de Veículos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CRUD de Veículos</h1>
+            <h2>Adicionar Novo Veículo</h2>
+        </header>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+
+            <div class="input-label-container">
+                <label for="locadora">
+                    Locadora:
+                </label>
+                <input type="text" class="form-control" name="locadora" id="locadora" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="modelo">
+                    Modelo:
+                </label>
+                <input type="text" class="form-control" name="modelo" id="modelo" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="marca">
+                    Marca:
+                </label>
+                <input type="text" class="form-control" name="marca" id="marca" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="ano">
+                    Ano:
+                </label>
+                <input type="number" class="form-control" name="ano" id="ano" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="motor">
+                    Motor:
+                </label>
+                <input type="text" class="form-control" name="motor" id="motor" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="portas">
+                    Portas:
+                </label>
+                <input type="number" class="form-control" name="portas" id="portas" required>
+            </div>
+
+            <div class="input-label-container">
+                <label for="câmbio">
+                    Câmbio:
+                </label>
+                <input type="text" class="form-control" name="câmbio" id="câmbio" maxlength="12">
+                <!-- limitação de 12 caracteres por conta dos tipos de cambio: manual, automatico, automatizado e CVT -->    
+            </div>
+
+            <div class="input-label-container">
+                <label for="ar_condicionado">
+                Ar Condicionado:
+                </label>
+                <input type="checkbox" class="form-control" id="ar_condicionado" name="ar_condicionado">
+            </div>
+    
+            <button type="submit" id="adicionar_veiculo">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <button id="atualizar_lista">Atualizar lista</button>
+        <table id="veiculos-table">
+            <thead>
+                <tr>
+                    <th>Locadora</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Ano</th>
+                    <th>Motor</th>
+                    <th>Câmbio</th>
+                    <th>Ar Condicionado</th>
+                </tr>
+                <tbody>
+                    <!-- espaço para preencher as linhas da tabela com os veiculos cadastrados -->
+                </tbody>
+            </thead>
+        </table>
+
+    </div>
+    <script src="/dist/bundle.js"></script>
+</body>
+</html>

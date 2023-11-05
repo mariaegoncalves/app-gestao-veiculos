@@ -1,4 +1,4 @@
-# app CRUD
+# rentcars-programa-estagio-2023
 
 ## Visão geral
 
@@ -87,7 +87,39 @@ O erro ocorre quando o cliente tenta realizar uma solicitação POST para o endp
 Estou atualmente investigando a causa do problema e trabalhando para identificar as possíveis razões por trás desse erro. Estou também buscando ajuda de colegas de profissão e explorando soluções possíveis para resolver o erro.
 
 ## Exemplos de solicitações cURL para o Postman.
-
+Alguns exemplos de solicitações cURL para testar as funcionalidade da API no Postman.
+### Solicitação GET para obter a lista de veículos
+```bash
+curl -X GET http://localhost:3000/veiculos
+```
+### Solicitação GET para obter detalhes de um veículo específico (substitua o ID)
+```bash
+curl -X GET http://localhost:3000/veiculos/1
+```
+### Solicitação POST para cadastrar um novo veículo (substitua os dados)
+``` bash
+curl -X POST -d '{
+  "locadora": "Locadora A",
+  "modelo": "Modelo X",
+  "marca": "Marca Y",
+  "ano": 2023,
+  "motor": "Motor V8",
+  "numero_de_portas": 4,
+  "tipo_de_cambio": "Automático",
+  "ar_condicionado": true
+}' http://localhost:3000/veiculos
+```
+### Solicitação PUT para atualizar os detalhes de um veículo existente (substitua o ID e os dados)
+``` bash
+curl -X PUT -d '{
+  "modelo": "Novo Modelo",
+  "ano": 2024
+}' http://localhost:3000/veiculos/1
+```
+### Solicitação DELETE para excluir um veículo com base no ID
+``` bash
+curl -X DELETE http://localhost:3000/veiculos/1
+```
 
 
 
